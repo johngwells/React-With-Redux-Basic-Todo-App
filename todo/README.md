@@ -11,6 +11,8 @@ In this app I am introducing Redux
     - array will hold each of the todo items
     - again: each with text, id, completed
 
+*** Need to install Redux logger ***
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
