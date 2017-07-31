@@ -1,8 +1,8 @@
-// any value greater than -1 will find/create new maxID which you can use
-// +1 will add the new id
+// any value greater than -1 will find/create new maxID which
+// +1 will add the new unique id
 function getId(state) {
   return state.todos.reduce((maxId, todo) => {
-    return Math.max(todo.is, maxId)
+    return Math.max(todo.id, maxId)
   }, -1) + 1
 }
 
@@ -11,7 +11,7 @@ export default function reducer(state, action) {
     case 'ADD_TODO':
     // first state brings in all the state's data into the empty object
     // the second one below ...state, todos overwrites that object
-      Object.assign({}, state, {
+      return Object.assign({}, state, {
         todos: [{
           text: action.text,
           completed: false,

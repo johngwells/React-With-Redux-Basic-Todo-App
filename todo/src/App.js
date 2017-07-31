@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import TodoInput from './components/TodoInput'
-import TodoList from './components/TodoList'
+import TodoInput from './components/TodoInput';
+import TodoList from './components/TodoList';
+import { connect } from 'react-redux';
 
+// connect creates a function that connects this component 
+// this new component will listen to changes in the provider/ in the store
 class App extends Component {
   render() {
     return (
@@ -15,11 +18,15 @@ class App extends Component {
         <div className="App-intro">
           <h1>What's on your mind?</h1>
         </div>
-        <TodoInput />
-        <TodoList />
+        <TodoInput dispatch={this.props.dispatch}/>
+        <TodoList todos={this.props.todos}/>
       </div>
     );
   }
 }
 
-export default App;
+function mapStateToProps(state) {
+  return state
+}
+// you want to map the props
+export default connect(mapStateToProps)(App)

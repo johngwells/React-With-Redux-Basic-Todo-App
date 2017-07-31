@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { addTodo } from '../actions/actions'
 
 class TodoInput extends Component {
   constructor(props) {
@@ -16,6 +17,14 @@ class TodoInput extends Component {
     })
     // console.log(event.target.value)
   }
+
+  handleSubmit(event) {
+    // stops the page from reloading
+    event.preventDefault()
+    // next we want to fire off an action
+    // console.log('submit button clicked')
+    this.props.dispatch(addTodo(this.state.inputText))
+  }
   
   render () {
     return (
@@ -29,7 +38,7 @@ class TodoInput extends Component {
         value={this.state.inputText}
         onChange={this.handleChange.bind(this)}
       />
-      <button>Submit</button>
+      <button onClick={this.handleSubmit.bind(this)}>Submit</button>
       </div>
     )
   }
