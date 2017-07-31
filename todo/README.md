@@ -2,14 +2,14 @@ Todo App - My General Setup
 In this app I am introducing Redux
 1. keep track of the list of todos in our state
 2. each todo is going to be an object
-    it's going to have a text
-    have an ID keeping track which todo is which
-    have a completed property with a boolean True || False
+    *it's going to have a text
+    *have an ID keeping track which todo is which
+    *have a completed property with a boolean True || False
 3. Be able to TOGGLE when clicked whether the task was completed or not
-     the state is going to be an object that has 1 property todos
-     that todos property is going to be an array
-     array will hold each of the todo items
-     again: each with text, id, completed
+    *the state is going to be an object that has 1 property todos
+    *that todos property is going to be an array
+    *array will hold each of the todo items
+    *again: each with text, id, completed
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
