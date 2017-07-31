@@ -29,16 +29,21 @@ class TodoInput extends Component {
   render () {
     return (
       <div>
-      <input 
-      // we dont want to be updating the Dom
-      // we want to make changes to the state and have that update state
-        type='text'
-        placeholder='type in your todo task'
-        // we are binding this.state.inputText
-        value={this.state.inputText}
-        onChange={this.handleChange.bind(this)}
-      />
-      <button onClick={this.handleSubmit.bind(this)}>Submit</button>
+        <form onSubmit={this.handleSubmit.bind(this)}>
+          <input 
+            // we dont want to be updating the Dom
+            // we want to make changes to the state and have that update state
+            type='text'
+            placeholder='type in your todo task'
+            // we are binding this.state.inputText
+            value={this.state.inputText}
+            onChange={this.handleChange.bind(this)}
+          />
+            {/* button: doesn't work when pressing enter so inorder for it to work that way we use a form instead */}
+            {/* place the onClick message in the <form> we just created */}
+          <input type="submit" text="Submit" />
+      {/* <button onClick={this.handleSubmit.bind(this)}>Submit</button> */}
+        </form>
       </div>
     )
   }
