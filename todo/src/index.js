@@ -5,7 +5,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import configureStore from './store';
 import { Provider } from 'react-redux';
-
+// In the works
 // intializing the our first initial state
 let initialState = {
   todos: [{
