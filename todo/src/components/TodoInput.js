@@ -41,7 +41,7 @@ class TodoInput extends Component {
           />
             {/* button: doesn't work when pressing enter so inorder for it to work that way we use a form instead */}
             {/* place the onClick message in the <form> we just created */}
-          <input type="submit" text="Submit" />
+          <input type="submit" />
       {/* <button onClick={this.handleSubmit.bind(this)}>Submit</button> */}
         </form>
       </div>
